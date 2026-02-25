@@ -162,12 +162,19 @@ def gen_drift(N: int, p_start: float, p_end: float, rng: np.random.Generator) ->
 # Tables
 # -------------------------
 def table_qrng_variations() -> pd.DataFrame:
+    # NOTE: Use plain ASCII so the table renders correctly in Excel on systems/fonts that
+    # don't include certain Unicode glyphs (e.g., arrows, minus sign, Greek letters).
     return pd.DataFrame([
-        ["Efficiency mismatch / offset (η0≠η1, θ≠0)", "Bias (P(1)≠0.5)", "IID min-entropy (MCV/IID)", "p_max increases → H_min decreases"],
-        ["Dead time (refractory)", "Low transition rate, run anomalies", "Markov/non-IID bound", "max(1−a) increases → H_min decreases"],
-        ["Afterpulsing", "Lag-1 positive correlation", "Markov/non-IID bound", "max(a) or max(1−b) increases → H_min decreases"],
-        ["Optical power drift", "Non-stationary bias over time", "APT + conservative bound", "window proportion deviates → tighter bound / alarms"],
+        ["Efficiency mismatch / offset", "Bias (P(1) != 0.5)", "IID min-entropy (MCV/IID)",
+         "p_max increases -> H_min decreases"],
+        ["Dead time (refractory)", "Low transition rate, run anomalies", "Markov/non-IID bound",
+         "(1-a) increases -> max(1-a, a, b, 1-b) increases -> H_min decreases"],
+        ["Afterpulsing", "Lag-1 positive correlation", "Markov/non-IID bound",
+         "a increases -> max(1-a, a, b, 1-b) increases -> H_min decreases"],
+        ["Optical power drift", "Non-stationary bias over time", "APT + conservative bound",
+         "Windowed proportion deviates from 0.5 -> alarms increase -> conservative bound tightens"],
     ], columns=["Variation (QRNG)", "Observable symptom", "Primary bound affected", "Effect on H_min (intuition)"])
+
 
 @dataclass
 class CaseDef:
