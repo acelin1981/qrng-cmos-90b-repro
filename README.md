@@ -1,6 +1,6 @@
-# Unified SP 800-90B Validation Framework (CMOS TRNG vs QRNG) — Repro Pack
+# Unified SP 800-90B Validation Framework (CMOS TRNG vs QRNG)
 
-This folder contains a small **Python-only** reproduction pack to regenerate the **tables** and **figures**
+This folder contains a small **Python-only** reproduction pack to regenerate the **tables**
 used in the accompanying manuscript/project write-up:
 
 - **Table**: QRNG variations → observable symptoms → affected bound → intuition on Hmin
