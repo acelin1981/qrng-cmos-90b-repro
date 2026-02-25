@@ -60,19 +60,5 @@ python generate_artifacts.py --outdir out --N 300000 --seeds 10 --bias_thr 0.01 
 - `table_aggregated_results.csv`  
   Aggregated (mean) metrics across seeds: IID pass rate, lag-1, p1, selected conservative Hmin bound, APT/RCT proxy alarm rates.
 
-## Suggested repo structure
-If you want to publish on GitHub:
-
-```
-your-repo/
-  repro/
-    generate_artifacts.py
-    requirements.txt
-    README.md
-  manuscript/
-    (your .docx / .pdf and supplementary materials)
-  LICENSE
-```
-
 ## License
 This pack includes an MIT `LICENSE` file at the repo root.
