@@ -32,7 +32,6 @@ python generate_artifacts.py --outdir out
 ```
 
 Outputs will appear under:
-- `out/figures/`
 - `out/tables/`
 
 ## Parameters (optional)
