@@ -1,4 +1,6 @@
 # Unified SP 800-90B Validation Framework (CMOS TRNG vs QRNG)
+Publish
+[# Unified SP 800-90B Validation Framework (CMOS TRNG vs QRNG)](https://www.ijcaonline.org/archives/volume187/number95/embedded-calibration-for-cryogenic-quantum-devices-using-a-singleton-sugeno-fuzzy-controller/)
 
 This folder contains a small **Python-only** reproduction pack to regenerate the **tables**
 used in the accompanying manuscript/project write-up:
